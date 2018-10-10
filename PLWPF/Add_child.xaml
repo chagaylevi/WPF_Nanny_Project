@@ -1,0 +1,101 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.Add_child"
+        mc:Ignorable="d"
+        Title="הוספת ילד" Height="320" Width="300" >
+    <!--<Window.Resources>
+        <local:convertId x:Key="convertId"/>
+    </Window.Resources>-->
+
+    <Grid Style="{DynamicResource gridStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="220*"/>
+            <RowDefinition Height="25*"/>
+        </Grid.RowDefinitions>
+
+        <Grid x:Name="grid1" Margin="0,52,0,3" Grid.ColumnSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="Auto" MinWidth="134"/>
+                <ColumnDefinition Width="Auto" MinWidth="158"/>
+            </Grid.ColumnDefinitions>
+            <Label VerticalAlignment="Center" Grid.Row="0" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="1" Content=":תאריך לידה" Height="26" Width="72"/>
+            <DatePicker x:Name="date_of_birthDatePicker" VerticalAlignment="Bottom" SelectedDate="{Binding date_of_birth, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="0" Margin="0,0,3.2,4" HorizontalAlignment="Right" Grid.Column="0" Height="24" Width="102">
+                <DatePicker.Style>
+                    <Style TargetType="{x:Type DatePicker}">
+                        <Style.Triggers>
+                            <Trigger Property="SelectedDate" Value="">
+                                <Setter Property="BorderBrush" Value="Red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </DatePicker.Style>
+            </DatePicker>
+            <Label VerticalAlignment="Center" Grid.Row="2" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="1" Content=":ת.ז של הילד" Height="26" Width="74"/>
+            <TextBox x:Name="id_childTextBox" Width="120" VerticalAlignment="Center" Text="{Binding id_child, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3,4,0,4" Height="24" HorizontalAlignment="Right" Grid.Column="0">
+                <TextBox.Style>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter Property="BorderBrush" Value="Red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <Label VerticalAlignment="Center" Grid.Row="3" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="1" Content=":ת.ז של האם" Height="26" Width="75"/>
+            <TextBox x:Name="id_motherTextBox" Width="120" VerticalAlignment="Center" Text="{Binding id_mother, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="3" Margin="3,4,0,4" Height="24" HorizontalAlignment="Right" Grid.Column="0">
+                <TextBox.Style>
+                    <Style TargetType="{x:Type TextBox}">
+                        <Style.Triggers>
+                            <Trigger Property="Text" Value="">
+                                <Setter Property="BorderBrush" Value="Red"/>
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </TextBox.Style>
+            </TextBox>
+            <Label VerticalAlignment="Center" Grid.Row="4" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="1" Content=":שם הילד" Height="26" Width="57"/>
+            <TextBox x:Name="nameTextBox" Width="120" VerticalAlignment="Center" Text="{Binding name, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4" Margin="3,4,0,4" Height="24" HorizontalAlignment="Right" Grid.Column="0"/>
+            <Label VerticalAlignment="Center" Grid.Row="5" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="1" Content="?האם קיימים צרכים מיוחדים" Height="26" Width="155"/>
+            <CheckBox x:Name="special_needsCheckBox" VerticalAlignment="Center" Grid.Row="5" Margin="0,8,3,8" IsChecked="{Binding special_needs, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Right" Grid.Column="0" Content="" Height="16" Width="20"/>
+            <Label VerticalAlignment="Center" Grid.Row="6" Margin="3,3,0,3" HorizontalAlignment="Left" Grid.Column="1" Content=":צרכים מיוחדים" Height="26" Width="88"/>
+            <TextBox x:Name="special_needsTextBox" Width="120" VerticalAlignment="Center" IsEnabled="{Binding ElementName=special_needsCheckBox, Path=IsChecked}" Text="{Binding Special_needs, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="6" Margin="3,4,0,4" Height="24" HorizontalAlignment="Right" Grid.Column="0"/>
+        </Grid>
+        <Label x:Name="label" Content=":אנא מלאי את השדות הבאים" HorizontalAlignment="Right" Margin="0,15,15,0" VerticalAlignment="Top" FontSize="15" Width="auto" Grid.ColumnSpan="2"/>
+        <Button x:Name="add" Content="הוספה" Grid.Row="1" Margin="5,0,5,0" FontSize="15" Click="button_Click">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=date_of_birthDatePicker, Path=DatePicker}" Value="01/01/0001">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=id_childTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=id_motherTextBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="update" Content="עדכון" Click="Button_Click_1" FontSize="15" Grid.Column="1" Margin="5,0,5,0" Grid.Row="1"/>
+    </Grid>
+</Window>

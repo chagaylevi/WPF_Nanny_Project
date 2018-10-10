@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ChildRoot>
+  <Child>
+    <id_child>111111</id_child>
+    <id_mother>111111</id_mother>
+    <name>yosi</name>
+    <special_needs>false</special_needs>
+    <Special_needs />
+    <Has_Nanny>false</Has_Nanny>
+    <date_of_birth>2015-02-12T00:00:00</date_of_birth>
+  </Child>
+  <Child>
+    <id_child>222222</id_child>
+    <id_mother>111111</id_mother>
+    <name>yehuda</name>
+    <special_needs>false</special_needs>
+    <Special_needs />
+    <Has_Nanny>false</Has_Nanny>
+    <date_of_birth>2015-02-12T00:00:00</date_of_birth>
+  </Child>
+  <Child>
+    <id_child>333333</id_child>
+    <id_mother>222222</id_mother>
+    <name>yoram</name>
+    <special_needs>true</special_needs>
+    <Special_needs />
+    <Has_Nanny>false</Has_Nanny>
+    <date_of_birth>2015-02-12T00:00:00</date_of_birth>
+  </Child>
+  <Child>
+    <id_child>444444</id_child>
+    <id_mother>333333</id_mother>
+    <name>ishay</name>
+    <special_needs>true</special_needs>
+    <Special_needs />
+    <Has_Nanny>false</Has_Nanny>
+    <date_of_birth>2015-02-12T00:00:00</date_of_birth>
+  </Child>
+  <Child>
+    <id_child>555555</id_child>
+    <id_mother>444444</id_mother>
+    <name>ishay</name>
+    <special_needs>false</special_needs>
+    <Special_needs />
+    <Has_Nanny>false</Has_Nanny>
+    <date_of_birth>2016-02-12T00:00:00</date_of_birth>
+  </Child>
+</ChildRoot>

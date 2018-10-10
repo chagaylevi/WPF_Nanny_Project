@@ -1,0 +1,92 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        xmlns:BE="clr-namespace:BE;assembly=BE" x:Class="PLWPF.Contract_Menu"
+        mc:Ignorable="d"
+        Title="Contract_Menu" Height="600" Width="600" Background="FloralWhite">
+    <Window.Resources>
+        <local:convertSalary x:Key="d"/>
+        <local:convertId x:Key="s"/>
+    </Window.Resources>
+
+    <Grid Style="{DynamicResource gridStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="94*"/>
+            <RowDefinition Height="330*"/>
+            <RowDefinition Height="46*"/>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="49*"/>
+        </Grid.RowDefinitions>
+        <Grid x:Name="grid1" Grid.Row="1" Grid.ColumnSpan="2" Grid.RowSpan="2">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="35"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="6*"/>
+                <ColumnDefinition Width="84*"/>
+                <ColumnDefinition Width="58*"/>
+                <ColumnDefinition Width="84*"/>
+                <ColumnDefinition Width="58*"/>
+                <ColumnDefinition Width="6*"/>
+            </Grid.ColumnDefinitions>
+
+            <Label x:Name="pay" VerticalAlignment="Center" Content="תשלום סופי" Grid.Row="8" Grid.Column="2" HorizontalAlignment="Center"/>
+            <TextBox  x:Name="payment" Grid.Row="8" IsEnabled="False" Text="{Binding payment ,Converter={StaticResource d},Mode=TwoWay,UpdateSourceTrigger=PropertyChanged, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Column="1"/>
+            <Label x:Name="name_mom" Content=":שם האמא" Grid.Column="4" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <TextBox x:Name="name_mother" Grid.Column="3" Text="{Binding name_mother, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3"/>
+            <Label x:Name="dateOfBirth" Content=":תאריך לידת הילד" Grid.Row="6" Grid.Column="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+            <DatePicker x:Name="dateOfBirthing" IsEnabled="False" SelectedDate="{Binding date_birth,Mode=TwoWay,NotifyOnValidationError=true, ValidatesOnExceptions=true,UpdateSourceTrigger=PropertyChanged}" Grid.Row="6" Grid.Column="3" Margin="3"/>
+            <Label VerticalAlignment="Center" Grid.Row="4" HorizontalAlignment="Center" Grid.Column="2" Content=":תחילת העסקה"/>
+            <DatePicker x:Name="date_of_beginDatePicker" SelectedDate="{Binding date_of_begin, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4" Margin="3" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="5" HorizontalAlignment="Center" Grid.Column="2" Content=":סיום העסקה"/>
+            <DatePicker x:Name="date_of_endDatePicker" SelectedDate="{Binding date_of_end, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="5" Grid.Column="1" Margin="3"/>
+            <Label VerticalAlignment="Center" Grid.Row="2" HorizontalAlignment="Center" Grid.Column="2" Content="?לפי שעה"/>
+            <CheckBox x:Name="hour_or_monthCheckBox" VerticalAlignment="Center" Grid.Row="2" IsChecked="{Binding hour_or_month, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Right" Content="" Margin="5,0" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="4" HorizontalAlignment="Center" Grid.Column="4" Content=":ת.ז של הילד"/>
+            <TextBox x:Name="id_childTextBox" Text="{Binding id_child,Converter={StaticResource s}, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="4" Margin="3" Grid.Column="3"/>
+            <Label VerticalAlignment="Center" Grid.Row="3" HorizontalAlignment="Center" Grid.Column="4" Content=":ת.ז של האמא"/>
+            <TextBox x:Name="id_motherTextBox" IsEnabled="False" Text="{Binding id_mother,Converter={StaticResource s},Mode=TwoWay,NotifyOnValidationError=True,ValidatesOnExceptions=True}" Grid.Row="3" Margin="3" Grid.Column="3"/>
+            <Label VerticalAlignment="Center" Grid.Row="5" HorizontalAlignment="Center" Grid.Column="4" Content=":ת.ז של המטפלת"/>
+            <TextBox x:Name="id_nannyTextBox" IsEnabled="False" Text="{Binding id_nanny,Converter={StaticResource s},Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="5" Margin="3" Grid.Column="3"/>
+            <Label VerticalAlignment="Center" Grid.Row="6" HorizontalAlignment="Center" Grid.Column="2" Content="?התקיימה פגישה"/>
+            <CheckBox x:Name="meetingCheckBox" VerticalAlignment="Center" Grid.Row="6" Margin="5,0" IsChecked="{Binding meeting, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Right" Content="" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="7" HorizontalAlignment="Center" Grid.Column="4" Content=":כתובת האם"/>
+            <TextBox x:Name="motherAddressTextBox" Text="{Binding MotherAddress, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="7" Margin="3" Grid.Column="3"/>
+            <Label VerticalAlignment="Center" Grid.Row="1" HorizontalAlignment="Center" Grid.Column="4" Content=":שם הילד"/>
+            <TextBox x:Name="name_childTextBox" Text="{Binding name_child, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="1" Margin="3" Grid.Column="3"/>
+            <Label VerticalAlignment="Center" Grid.Row="2" HorizontalAlignment="Center" Grid.Column="4" Content=":שם המטפלת"/>
+            <TextBox x:Name="name_nannyTextBox" IsEnabled="False" Text="{Binding name_nanny, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="2" Margin="3" Grid.Column="3"/>
+            <Label VerticalAlignment="Center" Grid.Row="8" HorizontalAlignment="Center" Grid.Column="4" Content=":כתובת המטפלת"/>
+            <TextBox x:Name="nannyAddresTextBox" IsEnabled="False" Text="{Binding NannyAddres, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="8" Margin="3" Grid.Column="3"/>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" Content=":מס חוזה"/>
+            <TextBox x:Name="num_of_contractTextBox" IsEnabled="False" Text="{Binding num_of_contract, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="3" HorizontalAlignment="Center" Grid.Column="2" Content=":תעריף לשעה"/>
+            <TextBox x:Name="per_hourTextBox" IsEnabled="False" Text="{Binding per_hour,Converter={StaticResource d}, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Grid.Row="3" Margin="3" Grid.Column="1"/>
+            <Label VerticalAlignment="Center" HorizontalAlignment="Center" Grid.Column="2" Content=":תעריף חודשי" Grid.Row="1"/>
+            <TextBox x:Name="per_monthTextBox" IsEnabled="False" Text="{Binding per_month,Converter={StaticResource d},Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" Margin="3" Grid.Column="1" Grid.Row="1"/>
+            <Label VerticalAlignment="Center" Grid.Row="7" HorizontalAlignment="Center" Grid.Column="2" Content="?נחתם חוזה"/>
+            <CheckBox x:Name="signing_a_contractCheckBox" VerticalAlignment="Center" Grid.Row="7" Margin="5,0" IsChecked="{Binding signing_a_contract, Mode=TwoWay, NotifyOnValidationError=true, ValidatesOnExceptions=true}" HorizontalAlignment="Right" Content="" Grid.Column="1"/>
+        </Grid>
+        <Button x:Name="sign_mom" Content="אישור האמא" FontSize="18" Grid.Row="3" Grid.Column="0" Click="sign_mom_Click" Margin="10,5"/>
+        <Button x:Name="cancel_nanny" Content="דחיית החוזה" Grid.Row="4" FontSize="18" Grid.Column="0" Click="cancel_Click" Margin="10,5"/>
+        <Button x:Name="sign_nanny" Content="אישור המטפלת" FontSize="18" Grid.Row="4" Margin="10,5" Click="sign_nanny_Click" Grid.Column="1"/>
+        <Button x:Name="checking" Content="חישוב תשלום" FontSize="18" Grid.Row="3" Margin="10,5" Click="Calculate_payment" Grid.Column="1"/>
+        <Button x:Name="update" Content="עדכון" Grid.Row="2" FontSize="18" Click="update_" Margin="10,5" Grid.Column="1"/>
+        <TextBlock HorizontalAlignment="Right" FontSize="24" Margin="0,25,30,0" TextWrapping="Wrap" Text=":אנא מלאי את השדות הבאים" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+    </Grid>
+</Window>

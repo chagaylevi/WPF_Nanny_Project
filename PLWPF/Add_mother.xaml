@@ -1,0 +1,173 @@
+﻿<Window x:Class="PLWPF.Add_mother"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        xmlns:BE="clr-namespace:BE;assembly=BE"  
+        d:DataContext="{d:DesignInstance BE:Mother}"
+        Title="הוספת אמא" Height="500" Width="600">
+    <Grid Style="{DynamicResource gridStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="25*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="94*"/>
+            <ColumnDefinition Width="96*"/>
+            <ColumnDefinition Width="178*"/>
+            <ColumnDefinition Width="107*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="35*"/>
+            <RowDefinition Height="70*"/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="button" Content="הוספה" Margin="15,15,32,15" FontSize="22" Grid.Row="8" Click="button_Click" Grid.ColumnSpan="3">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=id_textBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=textBox1, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=textBox2, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=textBox3, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=textBox4, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Button x:Name="button1" Content="הוספת ילד" Margin="102,15,15,15" FontSize="22" Grid.Column="4" Grid.Row="8" Grid.ColumnSpan="2" Click="Add_child_Click">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=id_textBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=textBox1, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=textBox2, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=textBox3, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ElementName=textBox4, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label x:Name="label" Content="מספר ת.ז" Grid.Column="5" HorizontalAlignment="Left" Margin="0,70,0,0" VerticalAlignment="Top" Height="26" Width="59" Grid.RowSpan="2"/>
+        <Label x:Name="label1" Content="שם פרטי" Grid.Column="5" HorizontalAlignment="Left" Margin="0,9,0,0" VerticalAlignment="Top" Height="26" Width="57" Grid.Row="1"/>
+        <Label x:Name="label2" Content="שם משפחה" Grid.Column="5" HorizontalAlignment="Left" Margin="0,39,0,0" VerticalAlignment="Top" Height="26" Width="72" Grid.Row="1" Grid.RowSpan="2"/>
+        <Label x:Name="label3" Content="מס' פלאפון" Grid.Column="5" HorizontalAlignment="Left" Margin="0,26,0,0" VerticalAlignment="Top" Height="26" Width="68" Grid.Row="2" Grid.RowSpan="2"/>
+        <Label x:Name="label4" Content="כתובת" Grid.Column="5" HorizontalAlignment="Left" Margin="0,18,0,0" Height="26" VerticalAlignment="Top" Width="44" Grid.Row="3" Grid.RowSpan="2"/>
+        <Label x:Name="label5" Content="איזור חיפוש רצוי" Grid.Column="5" HorizontalAlignment="Left" Margin="0,10,0,0" VerticalAlignment="Top" Height="26" Width="93" Grid.Row="4"/>
+        <Label x:Name="label6" Content="מספר ילדים" Grid.Column="5" HorizontalAlignment="Left" Margin="0,40,0,0" VerticalAlignment="Top" Height="26" Width="71" Grid.Row="4" Grid.RowSpan="2"/>
+        <Label x:Name="label7" Content="אם חד הורית" Grid.Column="5" HorizontalAlignment="Left" Margin="0,28.443,0,0" VerticalAlignment="Top" Height="26" Width="76" Grid.Row="5" Grid.RowSpan="2"/>
+        <Label x:Name="label8" Content="הערות" Grid.Column="5" HorizontalAlignment="Left" Margin="0,13.886,0,0"  VerticalAlignment="Top" Height="26" Width="44" Grid.Row="6"/>
+        <TextBox x:Name="id_textBox" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Grid.Column="4" Height="23" Margin="0,70,0,0" Text="{Binding id}" VerticalAlignment="Top" TextChanged="id_textBox_TextChanged" Width="130">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="BorderBrush" Value="Red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="textBox1" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Grid.Column="4" Height="23" Margin="0,12,0,0" Text="{Binding firstName}" VerticalAlignment="Top" Width="130" Grid.Row="1">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="BorderBrush" Value="Red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="textBox2" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Grid.Column="4" Height="23" Text="{Binding lastName}" VerticalAlignment="Top" Width="130" Grid.Row="2">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="BorderBrush" Value="Red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="textBox3" HorizontalContentAlignment="Center" TextChanged="textBox3_TextChanged" HorizontalAlignment="Right" Grid.Column="4" Height="23" Margin="0,29,0,0" Text="{Binding phone}" VerticalAlignment="Top" Width="130" Grid.Row="2" Grid.RowSpan="2">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="BorderBrush" Value="Red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="textBox4" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Grid.Column="4" Height="23" Margin="0,20,0,0" Text="{Binding address}" VerticalAlignment="Top" Width="130" Grid.Row="3" Grid.RowSpan="2">
+            <TextBox.Style>
+                <Style TargetType="{x:Type TextBox}">
+                    <Style.Triggers>
+                        <Trigger Property="Text" Value="">
+                            <Setter Property="BorderBrush" Value="Red"/>
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBox.Style>
+        </TextBox>
+        <TextBox x:Name="textBox5" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Grid.Column="4" Height="23" Margin="0,12,0,0" Text="{Binding search_area}" VerticalAlignment="Top" Width="130" Grid.Row="4"/>
+        <TextBox x:Name="textBox6" HorizontalContentAlignment="Right" HorizontalAlignment="Right" Grid.Column="4" Height="54" Margin="0,18.886,0,0" Text="{Binding comments}" VerticalAlignment="Top" Width="130" Grid.Row="6" Grid.RowSpan="2" />
+        <TextBox x:Name="textBox7" Grid.Column="4" HorizontalContentAlignment="Center" HorizontalAlignment="Right" Height="23" Margin="0,4.443,0,0" Grid.Row="5" Text="{Binding count_of_children}" VerticalAlignment="Top" Width="130"/>
+        <CheckBox x:Name="checkBox" Content="" HorizontalAlignment="Right" Grid.Column="4" Block.LineHeight="23" IsChecked="{Binding signle_mother}" Margin="0,34.443,0,0" VerticalAlignment="Top" Grid.Row="5" Grid.RowSpan="2" Height="22" Width="20"/>
+        <TextBlock x:Name="textBlock" Grid.Column="3" HorizontalAlignment="Right" Margin="0,25,15,0" TextWrapping="Wrap" Text=":אנא מלאי את השדות הבאים" FontSize="22" VerticalAlignment="Top" Width="309" Height="27" Grid.ColumnSpan="3"/>
+        <Label x:Name="label9" Content="יום בשבוע" HorizontalAlignment="Left" Margin="7,57,0,7" VerticalAlignment="Center" Grid.Column="3" FontSize="15" Grid.Row="0" Height="30" Width="74"/>
+        <Label x:Name="label10" Content="משעה" HorizontalAlignment="Left" Margin="10,57,0,7" VerticalAlignment="Center" Grid.Column="2" Height="30" FontSize="15" Grid.Row="0" Width="51"/>
+        <Label x:Name="label11" Content="עד שעה" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,57,0,7" Height="30" Grid.Row="0" FontSize="15" Width="62" Grid.Column="1" />
+        <CheckBox x:Name="checkBox1" Content="   ראשון" HorizontalAlignment="Left" Margin="13,12,0,0" Grid.Row="1" VerticalAlignment="Top" IsChecked="{Binding work_days[0]}" Grid.Column="3" Height="15" Width="72"/>
+        <CheckBox x:Name="checkBox2" Content="   שני"   HorizontalAlignment="Left" Margin="13,11,0,0" Grid.Row="2" VerticalAlignment="Top" IsChecked="{Binding work_days[1]}" Grid.Column="3" Height="15" Width="72"/>
+        <CheckBox x:Name="checkBox3" Content="   שלישי" HorizontalAlignment="Left" Margin="13,11,0,0" Grid.Row="3" VerticalAlignment="Top" IsChecked="{Binding work_days[2]}" Grid.Column="3" Height="15" Width="72"/>
+        <CheckBox x:Name="checkBox4" Content="   רביעי" HorizontalAlignment="Left" Margin="13,11.443,0,0" Grid.Row="4" VerticalAlignment="Top" IsChecked="{Binding work_days[3]}" Grid.Column="3" Height="15" Width="72"/>
+        <CheckBox x:Name="checkBox5" Content="   חמישי" HorizontalAlignment="Left" Margin="13,11.886,0,0" Grid.Row="5" VerticalAlignment="Top" IsChecked="{Binding work_days[4]}" Grid.Column="3" Height="15" Width="72"/>
+        <CheckBox x:Name="checkBox6" Content="   שישי"  HorizontalAlignment="Left" Margin="13,12.329,0,0" Grid.Row="6" VerticalAlignment="Top" IsChecked="{Binding work_days[5]}" Grid.Column="3" Height="15" Width="72"/>
+        <TextBox x:Name="end1" Padding="1" Grid.Row="1" TextWrapping="Wrap" Text="{Binding end_hours[0],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16" Margin="5,9,5,10" IsEnabled="{Binding ElementName=checkBox1,Path=IsChecked}" Grid.Column="1"/>
+        <TextBox x:Name="end2" Padding="1" Grid.Row="2" TextWrapping="Wrap" Text="{Binding end_hours[1],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,8,5,10" IsEnabled="{Binding ElementName=checkBox2,Path=IsChecked}" Grid.Column="1" />
+        <TextBox x:Name="end3" Padding="1" Grid.Row="3" TextWrapping="Wrap" Text="{Binding end_hours[2],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,9,5,10.557" IsEnabled="{Binding ElementName=checkBox3,Path=IsChecked}" Grid.Column="1"/>
+        <TextBox x:Name="end4" Padding="1" Grid.Row="4" TextWrapping="Wrap" Text="{Binding end_hours[3],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,8.443,5,9.114" IsEnabled="{Binding ElementName=checkBox4,Path=IsChecked}" Grid.Column="1"/>
+        <TextBox x:Name="end5" Padding="1" Grid.Row="5" TextWrapping="Wrap" Text="{Binding end_hours[4],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,8.886,5,8.671" IsEnabled="{Binding ElementName=checkBox5,Path=IsChecked}" Grid.Column="1"/>
+        <TextBox x:Name="end6" Padding="1" Grid.Row="6" TextWrapping="Wrap" Text="{Binding end_hours[5],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,9.329,5,8.671" IsEnabled="{Binding ElementName=checkBox6,Path=IsChecked}" Grid.Column="1"/>
+        <TextBox x:Name="start1" Padding="1" Grid.Column="2" Grid.Row="1" Text="{Binding start_hours[0],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,10,5,9" IsEnabled="{Binding ElementName=checkBox1,Path=IsChecked}"/>
+        <TextBox x:Name="start2" Padding="1" Grid.Column="2" Grid.Row="2" Text="{Binding start_hours[1],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,7,5,11" IsEnabled="{Binding ElementName=checkBox2,Path=IsChecked}"/>
+        <TextBox x:Name="start3" Padding="1" Grid.Column="2" Grid.Row="3" Text="{Binding start_hours[2],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,9,5,10.557" IsEnabled="{Binding ElementName=checkBox3,Path=IsChecked}"/>
+        <TextBox x:Name="start4" Padding="1" Grid.Column="2" Grid.Row="4" Text="{Binding start_hours[3],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,8.443,5,9.114" IsEnabled="{Binding ElementName=checkBox4,Path=IsChecked}"/>
+        <TextBox x:Name="start5" Padding="1" Grid.Column="2" Grid.Row="5" Text="{Binding start_hours[4],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,8.886,5,8.671" IsEnabled="{Binding ElementName=checkBox5,Path=IsChecked}"/>
+        <TextBox x:Name="start6" Padding="1" Grid.Column="2" Grid.Row="6" Text="{Binding start_hours[5],StringFormat=hh\\:mm}" HorizontalContentAlignment="Center" FontSize="16"  Margin="5,9.329,5,8.671" IsEnabled="{Binding ElementName=checkBox6,Path=IsChecked}"/>
+        <Label x:Name="err1" Content="ניתן להזין ספרות בלבד" Grid.Column="4" HorizontalAlignment="Right" Visibility="Collapsed" Margin="0,85,0,0" VerticalAlignment="Top" Foreground="Red" Grid.RowSpan="2"/>
+        <Label x:Name="err2" Content="ניתן להזין ספרות בלבד" Grid.Column="4" HorizontalAlignment="Right" Visibility="Collapsed" VerticalAlignment="Top" Foreground="Red" Height="31" Grid.Row="3"/>
+        <Button x:Name="button2" Content="עדכון" Grid.Column="3" Margin="0,15,105,15" Grid.Row="8" FontSize="22" Click="Button_Click_1" Grid.ColumnSpan="2"/>
+
+    </Grid>
+</Window>

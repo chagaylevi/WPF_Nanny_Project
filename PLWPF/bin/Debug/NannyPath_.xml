@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<ArrayOfNanny xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Nanny>
+    <MyContract />
+    <id>111111</id>
+    <firstName>chana</firstName>
+    <lastName>levi</lastName>
+    <date_of_birth>1991-08-12T00:00:00</date_of_birth>
+    <phone>0504444444</phone>
+    <address>נחל הבשור 4 בית שמש </address>
+    <elevators>true</elevators>
+    <floor>2</floor>
+    <years_of_experience>5</years_of_experience>
+    <max_of_children>11</max_of_children>
+    <count_of_children>0</count_of_children>
+    <min_age>1</min_age>
+    <max_age>4</max_age>
+    <per_hour>true</per_hour>
+    <MyDistance>0</MyDistance>
+    <hourly_rate>40</hourly_rate>
+    <monthly_rate>2000</monthly_rate>
+    <work_days>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+    </work_days>
+    <start_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </start_hours>
+    <end_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </end_hours>
+    <TMTorEDU>true</TMTorEDU>
+    <recommendations>good nanny</recommendations>
+  </Nanny>
+  <Nanny>
+    <MyContract />
+    <id>222222</id>
+    <firstName>Lea</firstName>
+    <lastName>kaplan</lastName>
+    <date_of_birth>1991-08-12T00:00:00</date_of_birth>
+    <phone>050443244</phone>
+    <address>גוש עציון</address>
+    <elevators>true</elevators>
+    <floor>2</floor>
+    <years_of_experience>6</years_of_experience>
+    <max_of_children>11</max_of_children>
+    <count_of_children>0</count_of_children>
+    <min_age>1</min_age>
+    <max_age>4</max_age>
+    <per_hour>true</per_hour>
+    <MyDistance>0</MyDistance>
+    <hourly_rate>40</hourly_rate>
+    <monthly_rate>2000</monthly_rate>
+    <work_days>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+    </work_days>
+    <start_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </start_hours>
+    <end_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </end_hours>
+    <TMTorEDU>true</TMTorEDU>
+    <recommendations>good nanny</recommendations>
+  </Nanny>
+  <Nanny>
+    <MyContract />
+    <id>333333</id>
+    <firstName>hen</firstName>
+    <lastName>lev</lastName>
+    <date_of_birth>1992-08-12T00:00:00</date_of_birth>
+    <phone>050443244</phone>
+    <address>שדרות בן זאב 8 בית שמש</address>
+    <elevators>true</elevators>
+    <floor>2</floor>
+    <years_of_experience>6</years_of_experience>
+    <max_of_children>11</max_of_children>
+    <count_of_children>0</count_of_children>
+    <min_age>1</min_age>
+    <max_age>4</max_age>
+    <per_hour>true</per_hour>
+    <MyDistance>0</MyDistance>
+    <hourly_rate>40</hourly_rate>
+    <monthly_rate>2500</monthly_rate>
+    <work_days>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+    </work_days>
+    <start_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </start_hours>
+    <end_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </end_hours>
+    <TMTorEDU>true</TMTorEDU>
+    <recommendations>good nanny</recommendations>
+  </Nanny>
+  <Nanny>
+    <MyContract />
+    <id>444444</id>
+    <firstName>flora</firstName>
+    <lastName>cohen</lastName>
+    <date_of_birth>1992-08-12T00:00:00</date_of_birth>
+    <phone>050443244</phone>
+    <address>שדרות בן זאב 8 בית שמש</address>
+    <elevators>true</elevators>
+    <floor>2</floor>
+    <years_of_experience>6</years_of_experience>
+    <max_of_children>11</max_of_children>
+    <count_of_children>0</count_of_children>
+    <min_age>1</min_age>
+    <max_age>4</max_age>
+    <per_hour>true</per_hour>
+    <MyDistance>0</MyDistance>
+    <hourly_rate>40</hourly_rate>
+    <monthly_rate>2500</monthly_rate>
+    <work_days>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+    </work_days>
+    <start_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </start_hours>
+    <end_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </end_hours>
+    <TMTorEDU>true</TMTorEDU>
+    <recommendations>good nanny</recommendations>
+  </Nanny>
+  <Nanny>
+    <MyContract />
+    <id>555555</id>
+    <firstName>rivka</firstName>
+    <lastName>toledano</lastName>
+    <date_of_birth>1992-08-12T00:00:00</date_of_birth>
+    <phone>050443244</phone>
+    <address>שדרות בן זאב 8 בית שמש</address>
+    <elevators>true</elevators>
+    <floor>2</floor>
+    <years_of_experience>6</years_of_experience>
+    <max_of_children>11</max_of_children>
+    <count_of_children>0</count_of_children>
+    <min_age>1</min_age>
+    <max_age>4</max_age>
+    <per_hour>true</per_hour>
+    <MyDistance>0</MyDistance>
+    <hourly_rate>40</hourly_rate>
+    <monthly_rate>2500</monthly_rate>
+    <work_days>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+    </work_days>
+    <start_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </start_hours>
+    <end_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </end_hours>
+    <TMTorEDU>true</TMTorEDU>
+    <recommendations>good nanny</recommendations>
+  </Nanny>
+</ArrayOfNanny>

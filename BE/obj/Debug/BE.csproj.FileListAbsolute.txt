@@ -1,0 +1,6 @@
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\BE\bin\Debug\BE.dll
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\BE\bin\Debug\BE.pdb
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\BE\obj\Debug\BE.csproj.CoreCompileInputs.cache
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\BE\obj\Debug\BE.dll
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\BE\obj\Debug\BE.pdb
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\BE\obj\Debug\BE.csprojResolveAssemblyReference.cache

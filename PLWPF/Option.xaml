@@ -1,0 +1,20 @@
+﻿<Window x:Class="PLWPF.Options"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="אפשרויות" Height="159.42" Width="209.188">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="image/children.jpg"/>
+        </Grid.Background>
+        <StackPanel>
+            <Button Content="מטפלות מותאמות"  Height="45" Background="Azure" Click="suit_nannies_button"/>
+            <Button Content="מטפלות מהסביבה" Height="45" Background="Azure" Click="around_nannies_button"/>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

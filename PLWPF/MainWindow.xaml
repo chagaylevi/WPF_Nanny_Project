@@ -1,0 +1,30 @@
+﻿<Window x:Class="PLWPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="ראשי" Height="350" Width="525">
+
+    <Grid Style="{DynamicResource gridStyle}">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="272*"/>
+            <ColumnDefinition Width="245*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100*"/>
+            <RowDefinition Height="100*"/>
+        </Grid.RowDefinitions>
+        <Label x:Name="label" FontWeight="Medium" Content="ברוכים הבאים לתוכנית מטפלת לכל אם"  FontSize="25" HorizontalAlignment="Center" Margin="35,33,35,0" VerticalAlignment="Top" Height="43" Width="auto" Grid.ColumnSpan="2"/>
+        <Label x:Name="label1" Content=":אנא בחרי באחת האפשרויות" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="120,96,120,0" Width="auto" FontWeight="SemiBold" Grid.ColumnSpan="2" Height="37"/>
+        <ListBox x:Name="listBox_nanny" VerticalAlignment="Top" Height="90" Background="LightGreen" HorizontalAlignment="Right" FontSize="12" Visibility="Collapsed" MouseLeave="listBox_nanny_MouseLeave" MouseEnter="listBox_nanny_MouseEnter" Grid.Row="1" Margin="0,0,0,0" Width="100" HorizontalContentAlignment="Right" MouseDoubleClick="listBox_nanny_MouseDoubleClick" Grid.Column="0"/>
+        <ListBox x:Name="listBox_mother" Background="BlueViolet" HorizontalAlignment="Right" MouseEnter="listBox_mother_MouseEnter" MouseLeave="listBox_mother_MouseLeave" FontSize="12" Visibility="Collapsed" Height="149" Grid.Row="1" VerticalAlignment="Top" Width="120" HorizontalContentAlignment="Right" Grid.Column="0" MouseDoubleClick="listBox_mother_MouseDoubleClick"/>
+        <StackPanel Grid.Column="1" Grid.Row="1">
+            <Button x:Name="button_nanny" Content="◄    מטפלת      " FontFamily="Guttman Yad-Brush" MouseLeave="button_nanny_MouseLeave" Background="LightGreen" MouseEnter="button_MouseEnter" FontSize="23" Height="45"/>
+            <Button x:Name="button_mother" FontFamily="Guttman Yad-Brush" MouseEnter="button_mother_MouseEnter" MouseLeave="button_mother_MouseLeave" Content="◄      אמא       " Background="BlueViolet" FontSize="23" Height="45"/>
+            <Button x:Name="button_optiones" FontFamily="Guttman Yad-Brush" MouseEnter="button_optiones_MouseEnter" MouseLeave="button_optiones_MouseLeave" Content="◄ אפשרויות נוספות" Background="BurlyWood" FontSize="23" Height="45"/>
+        </StackPanel>
+        <ListBox x:Name="listBox_options" Height="auto" Background="BurlyWood" MouseEnter="listBox_options_MouseEnter" MouseLeave="listBox_options_MouseLeave" Visibility="Collapsed" HorizontalAlignment="Right" Margin="0,60,0,0" Grid.Row="1" VerticalAlignment="Top" HorizontalContentAlignment="Right" Width="150" MouseDoubleClick="listBox_options_MouseDoubleClick"/>
+    </Grid>
+</Window>

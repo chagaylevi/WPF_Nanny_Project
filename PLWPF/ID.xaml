@@ -1,0 +1,25 @@
+﻿<Window x:Class="PLWPF.ID"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PLWPF"
+        mc:Ignorable="d"
+        Title="ת.ז" Height="170" Width="250">
+    <Grid>
+        <Label x:Name="label" Content="אנא הכניסי מספר ת.ז" Height="30" Width="auto" VerticalAlignment="Top" HorizontalAlignment="Right" Margin="0,30,15,0" />
+        <TextBox x:Name="textBox" HorizontalAlignment="Right" Height="30" Margin="0,60,15,0" Text="" VerticalAlignment="Top" Width="120"/>
+        <Button x:Name="name_button" Content="אישור" HorizontalAlignment="Left" Margin="25,0,0,10" VerticalAlignment="Bottom" Click="button_Click" Width="75">
+            <Button.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=textBox, Path=Text}" Value="">
+                            <Setter Property="Button.IsEnabled" Value="False"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Button.Style>
+        </Button>
+        <Label x:Name="label_contract" Visibility="Collapsed" Content="אנא הכנס מספר חוזה" HorizontalAlignment="Right" Margin="0,30,15,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>

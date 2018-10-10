@@ -1,0 +1,140 @@
+<?xml version="1.0"?>
+<ArrayOfMother xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Mother>
+    <id>111111</id>
+    <firstName>orna</firstName>
+    <lastName>zohar</lastName>
+    <phone> 0504171895</phone>
+    <address>נחל יעלה 3 בית שמש</address>
+    <search_area>נחל צאלים 8 בית שמש</search_area>
+    <signle_mother>false</signle_mother>
+    <count_of_children>1</count_of_children>
+    <work_days>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+    </work_days>
+    <start_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </start_hours>
+    <end_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </end_hours>
+  </Mother>
+  <Mother>
+    <id>222222</id>
+    <firstName>ronit</firstName>
+    <lastName>tzur</lastName>
+    <phone> 0544171877</phone>
+    <address>הרצל 134 בית שמש </address>
+    <search_area>נחל קטלב 5 בית שמש</search_area>
+    <signle_mother>false</signle_mother>
+    <count_of_children>1</count_of_children>
+    <work_days>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+    </work_days>
+    <start_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </start_hours>
+    <end_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </end_hours>
+  </Mother>
+  <Mother>
+    <id>333333</id>
+    <firstName>orna</firstName>
+    <lastName>zohar</lastName>
+    <phone> 0504171895</phone>
+    <address>נחל איילון 7 בית שמש</address>
+    <search_area>נחל שמשון 9 בית שמש</search_area>
+    <signle_mother>false</signle_mother>
+    <count_of_children>1</count_of_children>
+    <work_days>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+    </work_days>
+    <start_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </start_hours>
+    <end_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </end_hours>
+  </Mother>
+  <Mother>
+    <id>444444</id>
+    <firstName>leha</firstName>
+    <lastName>levy</lastName>
+    <phone>0504171892</phone>
+    <address>נחל תמנה 5 בית שמש</address>
+    <search_area>נחל דולב 84 בית שמש</search_area>
+    <signle_mother>true</signle_mother>
+    <count_of_children>2</count_of_children>
+    <work_days>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+      <boolean>true</boolean>
+    </work_days>
+    <start_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </start_hours>
+    <end_hours>
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+      <TimeSpan />
+    </end_hours>
+    <comments>good Nanny!!!</comments>
+  </Mother>
+</ArrayOfMother>

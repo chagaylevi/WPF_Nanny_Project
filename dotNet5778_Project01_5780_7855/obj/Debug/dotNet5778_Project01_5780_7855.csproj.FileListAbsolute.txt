@@ -1,0 +1,6 @@
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\dotNet5778_Project01_5780_7855\bin\Debug\dotNet5778_Project01_5780_7855.exe.config
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\dotNet5778_Project01_5780_7855\bin\Debug\dotNet5778_Project01_5780_7855.exe
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\dotNet5778_Project01_5780_7855\bin\Debug\dotNet5778_Project01_5780_7855.pdb
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\dotNet5778_Project01_5780_7855\obj\Debug\dotNet5778_Project01_5780_7855.csproj.CoreCompileInputs.cache
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\dotNet5778_Project01_5780_7855\obj\Debug\dotNet5778_Project01_5780_7855.exe
+C:\Users\קינג חגי\Desktop\תיקיות חגי\פרויקט C#\פרוייקט\dotNet5778_Project01_5780_7855\dotNet5778_Project01_5780_7855\obj\Debug\dotNet5778_Project01_5780_7855.pdb
